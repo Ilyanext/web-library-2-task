@@ -1,0 +1,92 @@
+[
+  {
+    "id": 1,
+    "name": "Alex C",
+    "salary": 10000,
+    "position": {
+      "id": 1,
+      "name": "Tester"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Mainer",
+    "salary": 20000,
+    "position": {
+      "id": 1,
+      "name": "Tester"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Krasnov",
+    "salary": 30000,
+    "position": {
+      "id": 2,
+      "name": "Manage"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Mainer",
+    "salary": 50000,
+    "position": {
+      "id": 3,
+      "name": "Developer"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Fill",
+    "salary": 30000,
+    "position": {
+      "id": 3,
+      "name": "Developer"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Chastov",
+    "salary": 50000,
+    "position": {
+      "id": 3,
+      "name": "Developer"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Alex K",
+    "salary": 30000,
+    "position": {
+      "id": 1,
+      "name": "Tester"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Hamin",
+    "salary": 80000,
+    "position": {
+      "id": 2,
+      "name": "Manage"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Dikiy",
+    "salary": 70000,
+    "position": {
+      "id": 2,
+      "name": "Manage"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Egor",
+    "salary": 100000,
+    "position": {
+      "id": 3,
+      "name": "Developer"
+    }
+  }
+]

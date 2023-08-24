@@ -1,0 +1,25 @@
+[
+  {
+    "id": 1,
+    "name": "Homer",
+    "name": "Simpson",
+    "salary": 44,
+    "position":
+      {
+        "id": 1,
+        "name": "Tester"
+      }
+
+  },
+  {
+    "id": 2,
+    "name": "Hrrrer",
+    "name": "EEEimpson",
+    "salary": 4433,
+    "position":
+      {
+        "id": 1,
+        "name": "Manage"
+      }
+  }
+]

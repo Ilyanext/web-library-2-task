@@ -20,7 +20,7 @@ public class Employee {
     @JsonBackReference
     @JsonProperty("position")
     private Position position;
-    private int counter =0;
+
     public Employee() {
     }
     public Employee(Integer id, String name) {
@@ -28,7 +28,7 @@ public class Employee {
         this.name = name;
     }
     public Employee( String name, int salary) {
-        this.id = counter++;
+        this.id = id;
         this.name = name;
         this.salary = salary;
     }

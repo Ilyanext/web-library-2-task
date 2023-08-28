@@ -17,7 +17,7 @@ public class Report {
     private String report;
 
     @CreationTimestamp(source = SourceType.DB)
-    @Column(updatable = false, name = "created_at", nullable = false)
+    @Column(updatable = false, name = "createв_at", nullable = false)
     private Instant createdAt;
     private String path;
 

@@ -105,11 +105,11 @@ public class EmployeeControllerTest {
 
     @Test
     void getShowSalary_test() throws Exception {
-        List<Employee> employees = new ArrayList<>();
-        employees.add(new Employee("Miha", 1000));
-        employees.add(new Employee("Ilya", 10000));
-        employees.add(new Employee("Mit", 1000));
-        employees.add(new Employee("Fil", 2000));
+        List<EmployeeDTO> employees = new ArrayList<>();
+        employees.add(new EmployeeDTO("Miha", 1000, new PositionDto(0, "test")));
+        employees.add(new EmployeeDTO("Ilya", 10000, new PositionDto(0, "test")));
+        employees.add(new EmployeeDTO("Mit", 1000, new PositionDto(0, "test")));
+        employees.add(new EmployeeDTO("Fil", 2000, new PositionDto(0, "test")));
 
         mockMvc.perform(post("/employee")
                         .contentType(MediaType.APPLICATION_JSON)
@@ -123,11 +123,11 @@ public class EmployeeControllerTest {
 
     @Test
     void getShowAvgSalary_test() throws Exception {
-        List<Employee> employees = new ArrayList<>();
-        employees.add(new Employee("Miha", 1000));
-        employees.add(new Employee("Ilya", 10000));
-        employees.add(new Employee("Mit", 1000));
-        employees.add(new Employee("Fil", 2000));
+        List<EmployeeDTO> employees = new ArrayList<>();
+        employees.add(new EmployeeDTO("Miha", 1000, new PositionDto(0, "test")));
+        employees.add(new EmployeeDTO("Ilya", 10000, new PositionDto(0, "test")));
+        employees.add(new EmployeeDTO("Mit", 1000, new PositionDto(0, "test")));
+        employees.add(new EmployeeDTO("Fil", 2000, new PositionDto(0, "test")));
 
         mockMvc.perform(post("/employee")
                         .contentType(MediaType.APPLICATION_JSON)

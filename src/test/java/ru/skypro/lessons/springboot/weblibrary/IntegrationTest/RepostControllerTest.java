@@ -17,6 +17,9 @@ import ru.skypro.lessons.springboot.weblibrary.pojo.Employee;
 import ru.skypro.lessons.springboot.weblibrary.pojo.Position;
 import ru.skypro.lessons.springboot.weblibrary.repository.EmployeeRepository;
 import ru.skypro.lessons.springboot.weblibrary.repository.ReportRepository;
+import ru.skypro.lessons.springboot.weblibrary.service.EmployeeServiceImpl;
+
+import java.util.List;
 
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.*;
 import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.jsonPath;
@@ -31,7 +34,8 @@ public class RepostControllerTest {
     MockMvc mockMvc;
     @Autowired
     public EmployeeRepository employeeRepository;
-
+    @Autowired
+    public EmployeeServiceImpl employeeService;
     @Autowired
     private ObjectMapper objectMapper;
 
@@ -52,7 +56,7 @@ public class RepostControllerTest {
 
         mockMvc.perform(post("/report")).
                 andExpect(status().isOk());
-        int id = 1;
+        Integer id = employeeService.generateReport();
 
         mockMvc.perform(get("/report/{id}", id)).
                 andExpect(status().isOk());
@@ -64,10 +68,9 @@ public class RepostControllerTest {
 
         mockMvc.perform(post("/report")).
                 andExpect(status().isOk());
-        int id = 1;
+        Integer id = employeeService.generateReport();
 
         mockMvc.perform(get("/report/file/{id}", id)).
                 andExpect(status().isOk());
-
     }
 }

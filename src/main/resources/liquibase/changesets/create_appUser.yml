@@ -1,10 +1,10 @@
 databaseChangeLog:
   - changeSet:
-      id: 4 # идентификатор набора изменений
+      id: 12 # идентификатор набора изменений
       author: developer # имя разработчика, который добавил набор изменений
       changes: # список изменений в этом наборе
         - createTable: # команда liquibase — создает таблицу
-            tableName: app_User # название таблицы
+            tableName: app_user # название таблицы
             columns: # колонки к данной таблице
               - column: # колонка
                   name: id # название колонки

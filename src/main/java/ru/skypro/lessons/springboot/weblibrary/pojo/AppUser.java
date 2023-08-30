@@ -3,7 +3,7 @@ package ru.skypro.lessons.springboot.weblibrary.pojo;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "app_User")
+@Table(name = "app_user")
 public class AppUser {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

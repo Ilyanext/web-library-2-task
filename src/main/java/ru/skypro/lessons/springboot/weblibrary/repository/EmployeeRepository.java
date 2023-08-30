@@ -58,9 +58,6 @@ public interface EmployeeRepository extends CrudRepository<Employee, Integer> {
             "FROM Employee e  group by e.position ")
     List<ReportDto> buildReport();
 
-//    @Query(value = "update employee set name = :name, " +
-//            "salary = :salary where id = :id", nativeQuery = true)
-//    void updateEmployee(int id, String name, int salary);
 
     public default void update(int id, Employee oldEmployee) {
         int index = findIndexById(id);

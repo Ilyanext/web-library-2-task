@@ -1,6 +1,6 @@
 databaseChangeLog:
   - changeSet:
-      id: 3 # идентификатор набора изменений
+      id: 12 # идентификатор набора изменений
       author: developer # имя разработчика, который добавил набор изменений
       changes: # список изменений в этом наборе
         - createTable: # команда liquibase — создает таблицу
@@ -18,7 +18,7 @@ databaseChangeLog:
                   constraints:
                     nullable: false
               - column:
-                  name: create_at
+                  name: created_at
                   type: varchar (255)
                   constraints:
                     nullable: false

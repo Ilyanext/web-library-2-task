@@ -24,44 +24,44 @@
         <dependency>
             <groupId>org.mockito</groupId>
             <artifactId>mockito-core</artifactId>
-            <version>4.1.0</version>
+
             <scope>test</scope>
         </dependency>
 
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-core</artifactId>
-            <version>1.4.7</version>
+
         </dependency>
 
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.4.7</version>
+
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-jpa</artifactId>
-            <version>3.0.6</version>
+
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-security</artifactId>
-            <version>3.1.0</version>
+
         </dependency>
 
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.13.3</version>
+
         </dependency>
 
         <dependency>
             <groupId>org.postgresql</groupId>
             <artifactId>postgresql</artifactId>
-            <version>42.3.2</version>
+
         </dependency>
 
         <dependency>
@@ -95,6 +95,39 @@
 
     <build>
         <plugins>
+            <plugin>
+                <groupId>com.dkanejs.maven.plugins</groupId>
+                <artifactId>docker-compose-maven-plugin</artifactId>
+                <version>4.0.0</version>
+
+                <executions>
+                    <execution>
+                        <id>up</id>
+                        <phase>test-compile</phase>
+                        <goals>
+                            <goal>up</goal>
+                        </goals>
+                        <configuration>
+
+                            <composeFile>${project.basedir}/docker-compose.yaml</composeFile>
+                            <detachedMode>true</detachedMode>
+                        </configuration>
+                    </execution>
+
+                    <execution>
+                        <id>down</id>
+                        <phase>post-integration-test</phase>
+                        <goals>
+                            <goal>down</goal>
+                        </goals>
+                        <configuration>
+
+                            <composeFile>${project.basedir}/docker-compose.yaml</composeFile>
+                            <detachedMode>true</detachedMode>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
